@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white !important;
 }
 
 .substrate {
@@ -251,7 +253,7 @@ input.fillYourForm__input::placeholder {
 }
 
 header {
-  background: url(img/small320.png) no-repeat center;
+  background: url(@/assets/img/small320.png) no-repeat center;
   background-position-y: 0px;
   background-size: cover;
   -ms-grid-rows: 100px 445px;
@@ -303,7 +305,7 @@ header {
 
 @media (min-width: 768px) and (max-width: 900.98px) {
   header {
-    background: url(img/firstimg768.png) no-repeat center;
+    background: url(@/assets/img/firstimg768.png) no-repeat center;
     background-size: cover;
     -ms-grid-rows: 100px 315px;
         grid-template-rows: 100px 315px;
@@ -313,7 +315,7 @@ header {
 
 @media (min-width: 901px) {
   header {
-    background: url(img/firstimg.png) no-repeat center;
+    background: url(@/assets/img/firstimg.png) no-repeat center;
     -ms-grid-rows: 100px 425px;
         grid-template-rows: 100px 425px;
     height: initial;
@@ -388,6 +390,7 @@ header {
 }
 
 #switcher:checked ~ .nav {
+  /*  ~ рядом или все следующие за ним элементы класса .nav (в отличии от + следующий за ним) */
   right: 0;
   z-index: 20;
 }
@@ -1161,7 +1164,7 @@ input[type="checkbox"] {
           align-items: center;
 }
 
-/* 
+/*
 .second__review {
     @media(max-width: 767.98px){
         display: none;
@@ -1210,8 +1213,8 @@ input[type="checkbox"] {
 }
 
 .firstGuest .infoGuest .order, .firstGuest .infoGuest .comment {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 9px;
+  line-height: 10px;
 }
 
 .firstGuest .infoGuest .order:not(:last-child), .firstGuest .infoGuest .comment:not(:last-child) {
@@ -1743,20 +1746,6 @@ input[type="checkbox"] {
   padding-bottom: 35px;
 }
 
-.select__block {
-  display: -ms-grid;
-  display: grid;
-  grid-row-gap: 10px;
-  justify-items: center;
-}
-
-@media (min-width: 1224px) {
-  .select__block {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .companies {
   justify-items: center;
   -webkit-box-align: center;
@@ -1766,7 +1755,6 @@ input[type="checkbox"] {
   padding-bottom: 15px;
   display: -ms-grid;
   display: grid;
-  z-index: -5;
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
       grid-template-areas: "bringo cdek cityExpress" "dpd pony spsr";
@@ -1802,7 +1790,6 @@ input[type="checkbox"] {
 .logoStyle {
   width: 66px;
   height: 42px;
-  cursor: pointer;
 }
 
 @media (min-width: 1224px) {
@@ -2014,14 +2001,22 @@ img[alt="ups"] {
 
 .footer__bottom_socialLinks {
   display: none;
+  width: 55px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   grid-area: socialLinks;
   -ms-grid-column-align: center;
       justify-self: center;
+  position: relative;
+  top: -5px;
 }
 
 @media (min-width: 768px) {
   .footer__bottom_socialLinks {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -2032,7 +2027,7 @@ img[alt="ups"] {
   -ms-grid-column-align: end;
       justify-self: end;
   position: relative;
-  top: -2px;
+  top: -9px;
 }
 
 @media (min-width: 768px) {
@@ -2208,113 +2203,19 @@ input.your__phone::placeholder {
 }
 
 .select {
-  position: relative;
-  display: block;
-  min-width: 120px;
-  width: 100%;
+  height: 62px;
 }
 
-@media (min-width: 320px) and (max-width: 968px) {
-  .select {
-    max-width: 715px;
+@media (max-width: 480.98px) {
+  .d-flex {
+    max-width: 280px !important;
   }
 }
 
-@media (min-width: 968.98px) and (max-width: 1170px) {
-  .select {
-    max-width: 812px;
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .d-flex {
+    max-width: 440px !important;
   }
-}
-
-@media (min-width: 1172px) and (max-width: 1223.98px) {
-  .select {
-    max-width: 957px;
-  }
-}
-
-@media (min-width: 1224px) {
-  .select {
-    width: 97%;
-  }
-}
-
-.select__head {
-  width: 97%;
-  max-width: 100%;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  border-radius: 35px;
-  padding: 22px 19px;
-  font-size: 14px;
-  line-height: 18px;
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  .select__head {
-    width: 100%;
-  }
-}
-
-.select__head::after {
-  width: 10px;
-  height: 6px;
-  background: #fff url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.50495 5.78413L0.205241 1.25827C-0.0684138 0.970375 -0.0684138 0.503596 0.205241 0.215836C0.478652 -0.0719461 0.922098 -0.071946 1.19549 0.215837L5.00007 4.22052L8.80452 0.215953C9.07805 -0.0718292 9.52145 -0.0718292 9.79486 0.215953C10.0684 0.503736 10.0684 0.970492 9.79486 1.25839L5.49508 5.78425C5.35831 5.92814 5.17925 6 5.00009 6C4.82085 6 4.64165 5.928 4.50495 5.78413Z' fill='%23ED266A'/%3E%3C/svg%3E%0A") no-repeat center/cover;
-  position: absolute;
-  right: 20px;
-  bottom: 50%;
-  content: "";
-  display: block;
-}
-
-.select__list {
-  /* display: none; */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #fff;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  border-radius: 35px;
-  margin-top: 5px;
-  max-height: 205px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 100;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  color: #424348;
-  scrollbar-color: dark;
-  scrollbar-width: thin;
-  overscroll-behavior: contain;
-}
-
-.select__list::-webkit-scrollbar {
-  width: 7px;
-  background-color: #f8f9fa;
-  padding: 5px;
-}
-
-.select__list::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #d9d9d9;
-}
-
-.select__list .select__item {
-  position: relative;
-  border-top: 1px solid rgba(224, 229, 231, 0.5);
-  padding: 10px 15px;
-  cursor: pointer;
-  list-style-type: none;
-  font-size: 14px;
-  line-height: 19px;
-}
-
-.select__list .select__item:hover {
-  background-color: rgba(224, 229, 231, 0.5);
 }
 
 .hiddenOpacity {
@@ -2323,7 +2224,7 @@ input.your__phone::placeholder {
 
 .github {
   position: relative;
-  bottom: -2px;
+  bottom: -1px;
   right: 3px;
   height: 14px;
   width: 14px;
@@ -2332,5 +2233,9 @@ input.your__phone::placeholder {
 .image {
   width: 14px;
   height: 14px;
+}
+
+.myName {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

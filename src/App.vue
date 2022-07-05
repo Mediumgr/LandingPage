@@ -67,7 +67,7 @@
             </div>
           </nav>
         </div>
-        <div class="header__text">
+        <div class="header__text gs_reveal">
           <h1 class="header__text_h1">придумайте что отправить</h1>
           <h2 class="header__text_h2">А посылка доедет сама</h2>
           <div class="header__text_button forClick">
@@ -75,11 +75,11 @@
           </div>
         </div>
       </header>
-      <div class="deliveres center">
+      <div class="deliveres center gs_reveal gs_reveal_fromLeft">
         <div class="deliveres__companies">
           <img :src="require('./assets/img/vector1.svg')" alt="company" />
         </div>
-        <div class="deliveres__text">
+        <div class="deliveres__text gs_reveal">
           <h2 class="deliveres__h2">Мы – агрегатор служб доставки</h2>
           <p class="deliveres__p">
             С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши услуги бесплатны,
@@ -92,12 +92,12 @@
         </div>
       </div>
       <section class="content center">
-        <div class="content__box">
+        <div class="content__box gs_reveal">
           <img :src="require('./assets/img/1.png')" alt="step 1" class="content__img" />
           <h2 class="content__h2">Шаг 1</h2>
           <p class="content__text">Придумайте что и кому отправить</p>
         </div>
-        <div class="content__box">
+        <div class="content__box gs_reveal">
           <img :src="require('./assets/img/2.png')" alt="step 2" class="content__img" />
           <h2 class="content__h2">Шаг 2</h2>
           <p class="content__text">
@@ -105,14 +105,14 @@
             запрос, уточнит все необходимые данные
           </p>
         </div>
-        <div class="content__box">
+        <div class="content__box gs_reveal"><!--  v-scroll:move.c="handleScroll" -->
           <img :src="require('./assets/img/3.png')" alt="step 3" class="content__img" />
           <h2 class="content__h2">Шаг 3</h2>
           <p class="content__text">
             К Вам приезжает курьер, забирает посылку, Вы подписываете один документ
           </p>
         </div>
-        <div class="content__box">
+        <div class="content__box gs_reveal">
           <img :src="require('./assets/img/4.png')" alt="step 4" class="content__img" />
           <h2 class="content__h2">Шаг 4</h2>
           <p class="content__text">
@@ -120,18 +120,18 @@
           </p>
         </div>
       </section>
-      <div class="takeCare center">
+      <div class="takeCare center gs_reveal gs_reveal_fromRight">
         <h2 class="takeCare__text">Мы берём все заботы по доставке на себя!</h2>
         <div class="PushButton forClick">
           <a href="#" class="button">Отправить посылку</a>
         </div>
       </div>
-      <div class="callYouBack center">
+      <div class="callYouBack center gs_reveal gs_reveal_fromLeft">
         <div class="callYouBack__leftBlock">
           <h1 class="callYouBack__h1">хотите мы вам перезвоним?</h1>
           <p class="callYouBack__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
         </div>
-        <form action="#" class="fillTheForm">
+        <form action="#" class="fillTheForm gs_reveal gs_reveal_fromRight">
           <input
             type="text"
             name="phone"
@@ -146,7 +146,7 @@
           </label>
         </form>
       </div>
-      <article class="feedbacks center">
+      <article class="feedbacks center gs_reveal">
         <h2 class="review">Отзывы</h2>
         <div class="leaveYourComments slider">
           <!-- eslint-disable  -->
@@ -238,7 +238,7 @@
           </a>
         </div>
       </article>
-      <div class="ourAdvantages center">
+      <div class="ourAdvantages center gs_reveal">
         <h1 class="advantages">НАШИ ПРЕИМУЩЕСТВА</h1>
         <div class="ourAdvantages__grid">
           <div class="same__content">
@@ -315,7 +315,7 @@
           </div>
         </div>
       </div>
-      <section class="guarantee center">
+      <section class="guarantee center gs_reveal">
         <h2 class="our__guarantees">НАШИ ГАРАНТИИ</h2>
         <div class="flex__container">
           <div class="go__ahead__left">
@@ -398,7 +398,7 @@
           </div>
         </div>
       </section>
-      <div class="doubts center">
+      <div class="doubts center gs_reveal">
         <h1 class="doubtsLeft">ОСТАЛИСЬ СОМНЕНИЯ?</h1>
         <div class="select__block">
           <v-container>
@@ -418,7 +418,7 @@
           </v-container>
         </div>
       </div>
-      <div class="companies__block center">
+      <div class="companies__block center gs_reveal gs_reveal_fromRight">
         <div class="go__left">
           <!-- eslint-disable -->
           <a class="arrow__companies__left">
@@ -478,7 +478,7 @@
           </a>
         </div>
       </div>
-      <div class="footer center">
+      <div class="footer center gs_reveal">
         <div class="footer__upper">
           <form action="#" class="footer__form">
             <div class="field__form">
@@ -601,15 +601,62 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 export default {
   name: 'App',
   data: () => ({
     items: [['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'], ['Мне необходимо совершить доставку по нескольким адресам', 'Дом', 'Улица', 'Торговый центр'], ['Вы не сможете доставить посылку за границу', 'Сможем доставить посылку за границу', 'Очень срочно напишите нам', 'Мы отошлем ее за вас'], ['Вы не занимаетесь такими простыми грузами, как мебельsda', 'Мы занимаемся за вас', 'Хватит сомневаться! Звоните нам'], ['Нужно заполнять кучу документов', 'Выбрать вариант без заполнения', 'Выбрать этот вариант'], ['Я отправляю вместе с коллегами, мы можем запутаться где чье', 'Мы отправим отдельно ваш заказ и не перепутаем', 'Выбрать вариант срочного заказа', 'Выбрать вариант обычного заказа']],
   }),
+  methods: {
+    hide(elem) {
+      gsap.set(elem, { autoAlpha: 0 });
+    },
+    animateFrom(elem, direction) {
+      // eslint-disable-next-line no-param-reassign
+      direction = direction || 1;
+      let x = 0;
+      let y = direction * 100;
+      if (elem.classList.contains('gs_reveal_fromLeft')) {
+        x = -100;
+        y = 0;
+      } else if (elem.classList.contains('gs_reveal_fromRight')) {
+        x = 100;
+        y = 0;
+      }
+      // eslint-disable-next-line no-param-reassign
+      elem.style.transform = `translate(${x}px, ${y}px)`;
+      // eslint-disable-next-line no-param-reassign
+      elem.style.opacity = '0';
+      gsap.fromTo(elem, { x, y, autoAlpha: 0 }, {
+        duration: 1.40,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: 'sine',
+        overwrite: 'auto',
+      });
+    },
+  },
   mounted() {
     const script = document.createElement('script');
     script.setAttribute('src', './store.js');
     document.body.appendChild(script);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.utils.toArray('.gs_reveal').forEach((elem) => {
+        this.hide(elem); // to make element is hidden when scrolled into view
+        ScrollTrigger.create({
+          trigger: elem,
+          onEnter: () => { this.animateFrom(elem); },
+          onEnterBack: () => { this.animateFrom(elem, -1); },
+          onLeave: () => { this.hide(elem); },
+        });
+      });
+    });
   },
 };
 </script>
