@@ -4,10 +4,9 @@
       <header class="header center">
         <div class="header__menu">
           <p class="logo"><img :src="require('./assets/img/logo.png')" alt="logo" /></p>
-          <label class="openSwitcher" for="switcher">
-            <input id="switcher" type="checkbox" />
-            <i class="fas fa-bars"></i>
-          </label>
+          <!-- eslint-disable  -->
+          <input id="switcher" type="checkbox" />
+          <label class="openSwitcher" for="switcher"><i class="fas fa-bars"></i></label>
           <nav class="nav">
             <img :src="require('./assets/img/sendit320.png')" alt="SendIt" class="hiddenLogo" />
             <ul class="nav__menu">
@@ -162,9 +161,9 @@
               <div class="infoGuest">
                 <h2 class="name">Дарья</h2>
                 <h3 class="company">La Intuicion</h3>
-                <p class="order">Посылка: товары</p>
-                <p class="order">Откуда: Москва</p>
-                <p class="order">Куда: Нижневартовск</p>
+                <h4 class="order">Посылка: товары</h4>
+                <h4 class="order">Откуда: Москва</h4>
+                <h4 class="order">Куда: Нижневартовск</h4>
               </div>
               <p class="comment">
                 Отличный и качественный сервис. Долго искали курьерскую службу для доставки наших
@@ -182,9 +181,9 @@
               <div class="infoGuest">
                 <h2 class="name">Елена</h2>
                 <h3 class="company">Global Logic</h3>
-                <p class="order">Посылка: товары</p>
-                <p class="order">Откуда: Москва</p>
-                <p class="order">Куда: Калининград</p>
+                <h4 class="order">Посылка: товары</h4>
+                <h4 class="order">Откуда: Москва</h4>
+                <h4 class="order">Куда: Калининград</h4>
               </div>
               <p class="comment">
                 Мне нравится работать с SendIt, потому что это удобно: моментальный расчет стоимости
@@ -202,9 +201,9 @@
               <div class="infoGuest">
                 <h2 class="name">Марина</h2>
                 <h3 class="company">Cargo</h3>
-                <p class="order">Посылка: товары</p>
-                <p class="order">Откуда: Кронштадт</p>
-                <p class="order">Куда: Владивосток</p>
+                <h4 class="order">Посылка: товары</h4>
+                <h4 class="order">Откуда: Кронштадт</h4>
+                <h4 class="order">Куда: Владивосток</h4>
               </div>
               <p class="comment">
                 Не один раз курьеры доставляли мне посылки, еще ни разу не опоздали! Всегда
@@ -221,9 +220,9 @@
               <div class="infoGuest">
                 <h2 class="name">Света</h2>
                 <h3 class="company">Сoffemania</h3>
-                <p class="order">Посылка: товары</p>
-                <p class="order">Откуда: Волгоград</p>
-                <p class="order">Куда: Краснодар</p>
+                <h4 class="order">Посылка: товары</h4>
+                <h4 class="order">Откуда: Волгоград</h4>
+                <h4 class="order">Куда: Краснодар</h4>
               </div>
               <p class="comment">
                 Пользуюсь услугами данной компании почти каждый день. Давно искала эту компанию по
@@ -244,7 +243,11 @@
         <div class="ourAdvantages__grid">
           <div class="same__content">
             <div class="ourAdvantages__content">
-              <img :src="require('./assets/img/11.png')" alt="Rapidity" class="ourAdvantages__image" />
+              <img
+                :src="require('./assets/img/11.png')"
+                alt="Rapidity"
+                class="ourAdvantages__image"
+              />
             </div>
             <div class="text__of__advantages">
               <p class="ourAdvantages__text">Бесплатный сервис</p>
@@ -252,7 +255,11 @@
           </div>
           <div class="same__content">
             <div class="ourAdvantages__content">
-              <img :src="require('./assets/img/123.svg')" alt="Rapidity" class="ourAdvantages__image" />
+              <img
+                :src="require('./assets/img/123.svg')"
+                alt="Rapidity"
+                class="ourAdvantages__image"
+              />
             </div>
             <div class="text__of__advantages">
               <p class="ourAdvantages__text">Огромный выбор вариантов доставки</p>
@@ -260,7 +267,11 @@
           </div>
           <div class="same__content">
             <div class="ourAdvantages__content">
-              <img :src="require('./assets/img/Layer2.svg')" alt="Rapidity" class="ourAdvantages__image" />
+              <img
+                :src="require('./assets/img/Layer2.svg')"
+                alt="Rapidity"
+                class="ourAdvantages__image"
+              />
             </div>
             <div class="text__of__advantages">
               <p class="ourAdvantages__text">4 параметра лучшего предложения</p>
@@ -268,7 +279,11 @@
           </div>
           <div class="same__content">
             <div class="ourAdvantages__content">
-              <img :src="require('./assets/img/Layer4.svg')" alt="Rapidity" class="ourAdvantages__image" />
+              <img
+                :src="require('./assets/img/Layer4.svg')"
+                alt="Rapidity"
+                class="ourAdvantages__image"
+              />
             </div>
             <div class="text__of__advantages">
               <p class="ourAdvantages__text">Удобство заказа</p>
@@ -276,7 +291,11 @@
           </div>
           <div class="same__content">
             <div class="ourAdvantages__content">
-              <img :src="require('./assets/img/Layer5.svg')" alt="Rapidity" class="ourAdvantages__image" />
+              <img
+                :src="require('./assets/img/Layer5.svg')"
+                alt="Rapidity"
+                class="ourAdvantages__image"
+              />
             </div>
             <div class="text__of__advantages">
               <p class="ourAdvantages__text">Online-поддержка</p>
@@ -284,7 +303,11 @@
           </div>
           <div class="same__content">
             <div class="ourAdvantages__content">
-              <img :src="require('./assets/img/Layer6.svg')" alt="Rapidity" class="ourAdvantages__image" />
+              <img
+                :src="require('./assets/img/Layer6.svg')"
+                alt="Rapidity"
+                class="ourAdvantages__image"
+              />
             </div>
             <div class="text__of__advantages">
               <p class="ourAdvantages__text">Единый номер отслеживания</p>
@@ -306,7 +329,11 @@
               <div class="insurance__flex">
                 <div class="insurance__block">
                   <div class="insurance__foto">
-                    <img :src="require('./assets/img/mailbox.png')" alt="mailbox" class="foto__box" />
+                    <img
+                      :src="require('./assets/img/mailbox.png')"
+                      alt="mailbox"
+                      class="foto__box"
+                    />
                   </div>
                   <div class="insurance__dispatch">
                     <h2 class="insurance__header">Страховка отправлений</h2>
@@ -374,61 +401,21 @@
       <div class="doubts center">
         <h1 class="doubtsLeft">ОСТАЛИСЬ СОМНЕНИЯ?</h1>
         <div class="select__block">
-          <div class="select">
-            <div class="select__head">
-              На бумажную волокиту уйдёт много времени, а мне нужно доставить срочно!
-            </div>
-            <ul class="select__list" style="display: none">
-              <li class="select__item">
-                На бумажную волокиту уйдёт много времени, а мне нужно доставить срочно!
-              </li>
-              <li class="select__item">Все еще сомневаетесь?</li>
-              <li class="select__item">Очень срочно</li>
-            </ul>
-          </div>
-          <div class="select">
-            <div class="select__head">Мне необходимо совершить доставку по нескольким адресам</div>
-            <ul class="select__list" style="display: none">
-              <li class="select__item">Мне необходимо совершить доставку по нескольким адресам</li>
-              <li class="select__item">Дом</li>
-              <li class="select__item">Улица</li>
-              <li class="select__item">Торговый центр</li>
-            </ul>
-          </div>
-          <div class="select">
-            <div class="select__head">Вы не сможете доставить посылку за границу</div>
-            <ul class="select__list" style="display: none">
-              <li class="select__item">Сможем доставить посылку за границу</li>
-              <li class="select__item">Очень срочно напишите нам</li>
-              <li class="select__item">Мы отошлем ее за вас</li>
-            </ul>
-          </div>
-          <div class="select">
-            <div class="select__head">Вы не занимаетесь такими простыми грузами, как мебель</div>
-            <ul class="select__list" style="display: none">
-              <li class="select__item">Мы займемся такими простыми грузами, как мебель</li>
-              <li class="select__item">Мы занимаемся за вас</li>
-              <li class="select__item">Хватит сомневаться! Звоните нам.</li>
-            </ul>
-          </div>
-          <div class="select">
-            <div class="select__head">Нужно заполнять кучу документов</div>
-            <ul class="select__list" style="display: none">
-              <li class="select__item">Не нужно заполнять кучу документов</li>
-              <li class="select__item">Выбрать вариант без заполнения</li>
-              <li class="select__item">Выбрать этот вариант</li>
-            </ul>
-          </div>
-          <div class="select">
-            <div class="select__head">
-              Я отправляю вместе с коллегами, мы можем запутаться где чье
-            </div>
-            <ul class="select__list" style="display: none">
-              <li class="select__item">Мы отправим отдельно ваш заказ и не перепутаем</li>
-              <li class="select__item">Выбрать вариант срочного заказа</li>
-              <li class="select__item">Выбрать обычный вариант заказа</li>
-            </ul>
-          </div>
+          <v-container>
+            <v-row v-for="(n, index) in 6">
+              <v-col class="d-flex">
+                <v-select
+                class="select"
+                :items="items[index]"
+                :label="items[index][0]"
+                dense
+                solo
+                rounded
+                append-icon="fa-solid fa-arrow-down fa-2xs">
+                </v-select>
+              </v-col>
+            </v-row>
+          </v-container>
         </div>
       </div>
       <div class="companies__block center">
@@ -451,7 +438,11 @@
           </div>
           <div class="cityExpress logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/city_express.png')" alt="city" class="cityExpress__img" />
+              <img
+                :src="require('./assets/img/city_express.png')"
+                alt="city"
+                class="cityExpress__img"
+              />
             </p>
           </div>
           <div class="dpd logoStyle slidesLogo">
@@ -481,7 +472,7 @@
           </div>
         </div>
         <div class="go__right">
-         <!--  eslint-disable -->
+          <!--  eslint-disable -->
           <a class="arrow__companies__right">
             <i class="fas fa-chevron-right fa-2x"></i>
           </a>
@@ -521,8 +512,8 @@
           <img :src="require('./assets/img/footerimg.png')" alt="Send it" class="send__it" />
           <label class="openSwitcher" for="switcher">
             <input id="switcher" type="checkbox" />
-              <i class="fas fa-bars bigMak"></i>
-            </label>
+            <i class="fas fa-bars bigMak"></i>
+          </label>
           <ul class="nav__bottom">
             <li class="footer__list">
               <p class="footer__link">Главная</p>
@@ -582,7 +573,12 @@
           </div>
           <div class="fillYourForm__ofYourRequest">Оставьте заявку, и мы Вам перезвоним!</div>
           <label for="nameRequest">
-            <input type="text" id="nameRequest" class="fillYourForm__input" placeholder="Ваше Имя"/>
+            <input
+              type="text"
+              id="nameRequest"
+              class="fillYourForm__input"
+              placeholder="Ваше Имя"
+            />
           </label>
           <input
             type="number"
@@ -607,14 +603,23 @@
 <script>
 export default {
   name: 'App',
+  data: () => ({
+    items: [['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'], ['Мне необходимо совершить доставку по нескольким адресам', 'Дом', 'Улица', 'Торговый центр'], ['Вы не сможете доставить посылку за границу', 'Сможем доставить посылку за границу', 'Очень срочно напишите нам', 'Мы отошлем ее за вас'], ['Вы не занимаетесь такими простыми грузами, как мебельsda', 'Мы занимаемся за вас', 'Хватит сомневаться! Звоните нам'], ['Нужно заполнять кучу документов', 'Выбрать вариант без заполнения', 'Выбрать этот вариант'], ['Я отправляю вместе с коллегами, мы можем запутаться где чье', 'Мы отправим отдельно ваш заказ и не перепутаем', 'Выбрать вариант срочного заказа', 'Выбрать вариант обычного заказа']],
+  }),
   mounted() {
     const script = document.createElement('script');
-    script.setAttribute('src', './assets/script/store.js');
-    document.head.appendChild(script);
+    script.setAttribute('src', './store.js');
+    document.body.appendChild(script);
   },
 };
 </script>
 
-<style lang="scss" scoped>
-@import '@/assets/styles/style.scss';
+<style lang="scss">
+@import "@/assets/styles/style.scss";
+.v-icon.v-icon {
+  font-size: 13px !important;
+}
+.v-text-field.v-text-field--solo.v-input--dense > .v-input__control {
+  min-height: 58px !important;
+}
 </style>
