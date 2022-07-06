@@ -4,5 +4,5 @@
 
 Посмотреть работу можно по ссылке https://landingpage-9vf7.onrender.com/
 
-Расположение script.js в папке public
+Расположение script.js в папке public,
 index.html в папке src - App.vue
