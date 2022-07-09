@@ -1,24 +1,8 @@
-# landing-page
+# Landing-page
 
-## Project setup
-```
-npm install
-```
+Адаптивная под мобильные и десктопные экраны лэндинг страница на нативном Javascript, разработанная на системе сеток Grid в css и анимации библиотеки GSAP.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Посмотреть работу можно по ссылке https://landingpage-9vf7.onrender.com/
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Расположение script.js в папке public,
+index.html в папке src - App.vue
