@@ -13,7 +13,6 @@ body {
 a {
     text-decoration: none;
     color: white !important;
-    
 }
 .substrate {
     display: none;
@@ -273,6 +272,7 @@ header {
         font-size: 18px;
         line-height: 22px;
         color: $color;
+        margin-bottom: 0 !important;
 
         &:hover {
             color: $background-light;
@@ -1709,10 +1709,10 @@ input.your__phone::placeholder {
 }
 
 .d-flex {
-   @media (max-width: 480.98px) {
+    @media (max-width: 480.98px) {
         max-width: 280px !important;
     }
-   @media (min-width: 481px) and (max-width: 767.98px) {
+    @media (min-width: 481px) and (max-width: 767.98px) {
         max-width: 440px !important;
     }
 }
@@ -1736,4 +1736,7 @@ input.your__phone::placeholder {
 
 .myName {
     color: black;
+    position: relative;
+    bottom: 2px;
+    left: 2px;
 }

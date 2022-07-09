@@ -105,7 +105,8 @@
             запрос, уточнит все необходимые данные
           </p>
         </div>
-        <div class="content__box gs_reveal"><!--  v-scroll:move.c="handleScroll" -->
+        <div class="content__box gs_reveal">
+          <!--  v-scroll:move.c="handleScroll" -->
           <img :src="require('./assets/img/3.png')" alt="step 3" class="content__img" />
           <h2 class="content__h2">Шаг 3</h2>
           <p class="content__text">
@@ -150,9 +151,9 @@
         <h2 class="review">Отзывы</h2>
         <div class="leaveYourComments slider">
           <!-- eslint-disable  -->
-          <a class="arrow__left">
+          <span class="arrow__left">
             <i class="fas fa-chevron-left fa-2x"></i>
-          </a>
+          </span>
           <div class="first__review slides">
             <div class="firstGuest">
               <div class="foto__block">
@@ -233,9 +234,9 @@
             </div>
           </div>
           <!-- eslint-disable -->
-          <a class="arrow__right">
+          <span class="arrow__right">
             <i class="fas fa-chevron-right fa-2x"></i>
-          </a>
+          </span>
         </div>
       </article>
       <div class="ourAdvantages center gs_reveal">
@@ -320,9 +321,9 @@
         <div class="flex__container">
           <div class="go__ahead__left">
             <!-- eslint-disable -->
-            <a class="arrow__companies__left">
+            <span class="arrow__companies__left">
               <i class="fas fa-chevron-left fa-2x"></i>
-            </a>
+            </span>
           </div>
           <div class="information__block">
             <div class="insurance">
@@ -392,9 +393,9 @@
           </div>
           <div class="go__ahead__right">
             <!-- eslint-disable -->
-            <a class="arrow__companies__right">
+            <span class="arrow__companies__right">
               <i class="fas fa-chevron-right fa-2x"></i>
-            </a>
+            </span>
           </div>
         </div>
       </section>
@@ -405,13 +406,14 @@
             <v-row v-for="(n, index) in 6">
               <v-col class="d-flex">
                 <v-select
-                class="select"
-                :items="items[index]"
-                :label="items[index][0]"
-                dense
-                solo
-                rounded
-                append-icon="fa-solid fa-arrow-down fa-2xs">
+                  class="select"
+                  :items="items[index]"
+                  :label="items[index][0]"
+                  dense
+                  solo
+                  rounded
+                  append-icon="fa-solid fa-arrow-down fa-2xs"
+                >
                 </v-select>
               </v-col>
             </v-row>
@@ -421,9 +423,9 @@
       <div class="companies__block center gs_reveal gs_reveal_fromRight">
         <div class="go__left">
           <!-- eslint-disable -->
-          <a class="arrow__companies__left">
+          <span class="arrow__companies__left">
             <i class="fas fa-chevron-left fa-2x"></i>
-          </a>
+          </span>
         </div>
         <div class="companies">
           <div class="bringo logoStyle slidesLogo">
@@ -473,9 +475,9 @@
         </div>
         <div class="go__right">
           <!--  eslint-disable -->
-          <a class="arrow__companies__right">
+          <span class="arrow__companies__right">
             <i class="fas fa-chevron-right fa-2x"></i>
-          </a>
+          </span>
         </div>
       </div>
       <div class="footer center gs_reveal">
@@ -607,7 +609,28 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export default {
   name: 'App',
   data: () => ({
-    items: [['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'], ['Мне необходимо совершить доставку по нескольким адресам', 'Дом', 'Улица', 'Торговый центр'], ['Вы не сможете доставить посылку за границу', 'Сможем доставить посылку за границу', 'Очень срочно напишите нам', 'Мы отошлем ее за вас'], ['Вы не занимаетесь такими простыми грузами, как мебельsda', 'Мы занимаемся за вас', 'Хватит сомневаться! Звоните нам'], ['Нужно заполнять кучу документов', 'Выбрать вариант без заполнения', 'Выбрать этот вариант'], ['Я отправляю вместе с коллегами, мы можем запутаться где чье', 'Мы отправим отдельно ваш заказ и не перепутаем', 'Выбрать вариант срочного заказа', 'Выбрать вариант обычного заказа']],
+    items: [
+      ['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'],
+      ['Мне необходимо совершить доставку по нескольким адресам', 'Дом', 'Улица', 'Торговый центр'],
+      [
+        'Вы не сможете доставить посылку за границу',
+        'Сможем доставить посылку за границу',
+        'Очень срочно напишите нам',
+        'Мы отошлем ее за вас',
+      ],
+      [
+        'Вы не занимаетесь такими простыми грузами, как мебельsda',
+        'Мы занимаемся за вас',
+        'Хватит сомневаться! Звоните нам',
+      ],
+      ['Нужно заполнять кучу документов', 'Выбрать вариант без заполнения', 'Выбрать этот вариант'],
+      [
+        'Я отправляю вместе с коллегами, мы можем запутаться где чье',
+        'Мы отправим отдельно ваш заказ и не перепутаем',
+        'Выбрать вариант срочного заказа',
+        'Выбрать вариант обычного заказа',
+      ],
+    ],
   }),
   methods: {
     hide(elem) {
@@ -629,14 +652,18 @@ export default {
       elem.style.transform = `translate(${x}px, ${y}px)`;
       // eslint-disable-next-line no-param-reassign
       elem.style.opacity = '0';
-      gsap.fromTo(elem, { x, y, autoAlpha: 0 }, {
-        duration: 1.40,
-        x: 0,
-        y: 0,
-        autoAlpha: 1,
-        ease: 'sine',
-        overwrite: 'auto',
-      });
+      gsap.fromTo(
+        elem,
+        { x, y, autoAlpha: 0 },
+        {
+          duration: 1.4,
+          x: 0,
+          y: 0,
+          autoAlpha: 1,
+          ease: 'sine',
+          overwrite: 'auto',
+        },
+      );
     },
   },
   mounted() {
@@ -651,9 +678,15 @@ export default {
         this.hide(elem); // to make element is hidden when scrolled into view
         ScrollTrigger.create({
           trigger: elem,
-          onEnter: () => { this.animateFrom(elem); },
-          onEnterBack: () => { this.animateFrom(elem, -1); },
-          onLeave: () => { this.hide(elem); },
+          onEnter: () => {
+            this.animateFrom(elem);
+          },
+          onEnterBack: () => {
+            this.animateFrom(elem, -1);
+          },
+          onLeave: () => {
+            this.hide(elem);
+          },
         });
       });
     });
