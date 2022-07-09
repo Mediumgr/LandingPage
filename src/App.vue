@@ -668,7 +668,7 @@ export default {
   },
   mounted() {
     const script = document.createElement('script');
-    script.setAttribute('src', './store.js');
+    script.setAttribute('src', './script.js');
     document.body.appendChild(script);
 
     document.addEventListener('DOMContentLoaded', () => {
