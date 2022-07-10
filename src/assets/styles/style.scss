@@ -266,6 +266,9 @@ header {
         @media (max-width: 767px) {
             flex-direction: column;
         }
+        @media (orientation: landscape) {
+            flex-direction: row;
+        }
     }
 
     &__link {
