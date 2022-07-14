@@ -3,12 +3,20 @@
     <v-main>
       <header class="header center">
         <div class="header__menu">
-          <p class="logo"><img :src="require('./assets/img/logo.png')" alt="logo" /></p>
+          <p class="logo">
+            <img :src="require('./assets/img/logo.png')" alt="logo" />
+          </p>
           <!-- eslint-disable  -->
           <input id="switcher" type="checkbox" />
-          <label class="openSwitcher" for="switcher"><i class="fas fa-bars"></i></label>
+          <label class="openSwitcher" for="switcher"
+            ><i class="fas fa-bars"></i
+          ></label>
           <nav class="nav">
-            <img :src="require('./assets/img/sendit320.png')" alt="SendIt" class="hiddenLogo" />
+            <img
+              :src="require('./assets/img/sendit320.png')"
+              alt="SendIt"
+              class="hiddenLogo"
+            />
             <ul class="nav__menu">
               <li class="nav__list">
                 <p class="nav__link">Главная</p>
@@ -52,17 +60,30 @@
               <div class="personalData">
                 <label for="data" class="data">
                   Я согласен на обработку персональных данных
-                  <input type="checkbox" name="data hidden__data" id="data" class="inputChecked" />
+                  <input
+                    type="checkbox"
+                    name="data hidden__data"
+                    id="data"
+                    class="inputChecked"
+                  />
                 </label>
               </div>
             </form>
             <div class="hidden__socialLinks">
               <p class="instagram">
-                <img :src="require('./assets/img/instagram.png')" alt="instagram" />
+                <img
+                  :src="require('./assets/img/instagram.png')"
+                  alt="instagram"
+                />
               </p>
-              <p class="vk"><img :src="require('./assets/img/vk.png')" alt="vk" /></p>
+              <p class="vk">
+                <img :src="require('./assets/img/vk.png')" alt="vk" />
+              </p>
               <p class="facebook">
-                <img :src="require('./assets/img/facebook.png')" alt="facebook" />
+                <img
+                  :src="require('./assets/img/facebook.png')"
+                  alt="facebook"
+                />
               </p>
             </div>
           </nav>
@@ -82,9 +103,10 @@
         <div class="deliveres__text gs_reveal">
           <h2 class="deliveres__h2">Мы – агрегатор служб доставки</h2>
           <p class="deliveres__p">
-            С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши услуги бесплатны,
-            так как мы получаем бонусы от служб доставок за предоставленный объем заказов, а вы
-            получаете надежный сервис в подарок!
+            С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши
+            услуги бесплатны, так как мы получаем бонусы от служб доставок за
+            предоставленный объем заказов, а вы получаете надежный сервис в
+            подарок!
           </p>
           <div class="header__text_button forClick">
             <a href="#" class="header__text_send">Отправить посылку</a>
@@ -93,30 +115,49 @@
       </div>
       <section class="content center">
         <div class="content__box gs_reveal">
-          <img :src="require('./assets/img/1.png')" alt="step 1" class="content__img" />
+          <img
+            :src="require('./assets/img/1.png')"
+            alt="step 1"
+            class="content__img"
+          />
           <h2 class="content__h2">Шаг 1</h2>
           <p class="content__text">Придумайте что и кому отправить</p>
         </div>
         <div class="content__box gs_reveal">
-          <img :src="require('./assets/img/2.png')" alt="step 2" class="content__img" />
+          <img
+            :src="require('./assets/img/2.png')"
+            alt="step 2"
+            class="content__img"
+          />
           <h2 class="content__h2">Шаг 2</h2>
           <p class="content__text">
-            Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит и подтвердит
-            запрос, уточнит все необходимые данные
-          </p>
-        </div>
-        <div class="content__box gs_reveal"><!--  v-scroll:move.c="handleScroll" -->
-          <img :src="require('./assets/img/3.png')" alt="step 3" class="content__img" />
-          <h2 class="content__h2">Шаг 3</h2>
-          <p class="content__text">
-            К Вам приезжает курьер, забирает посылку, Вы подписываете один документ
+            Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит
+            и подтвердит запрос, уточнит все необходимые данные
           </p>
         </div>
         <div class="content__box gs_reveal">
-          <img :src="require('./assets/img/4.png')" alt="step 4" class="content__img" />
+          <!--  v-scroll:move.c="handleScroll" -->
+          <img
+            :src="require('./assets/img/3.png')"
+            alt="step 3"
+            class="content__img"
+          />
+          <h2 class="content__h2">Шаг 3</h2>
+          <p class="content__text">
+            К Вам приезжает курьер, забирает посылку, Вы подписываете один
+            документ
+          </p>
+        </div>
+        <div class="content__box gs_reveal">
+          <img
+            :src="require('./assets/img/4.png')"
+            alt="step 4"
+            class="content__img"
+          />
           <h2 class="content__h2">Шаг 4</h2>
           <p class="content__text">
-            Вы ждёте подтверждения доставки, слова радости и благодарности от адресата :)
+            Вы ждёте подтверждения доставки, слова радости и благодарности от
+            адресата :)
           </p>
         </div>
       </section>
@@ -129,7 +170,9 @@
       <div class="callYouBack center gs_reveal gs_reveal_fromLeft">
         <div class="callYouBack__leftBlock">
           <h1 class="callYouBack__h1">хотите мы вам перезвоним?</h1>
-          <p class="callYouBack__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
+          <p class="callYouBack__text">
+            Закажите звонок, и менеджер вам всё расскажет и объяснит
+          </p>
         </div>
         <form action="#" class="fillTheForm gs_reveal gs_reveal_fromRight">
           <input
@@ -141,7 +184,12 @@
           />
           <button class="callYouBack__button phoneCall">заказать звонок</button>
           <label for="Agreed" class="agreed__text">
-            <input type="checkbox" name="Agreed" id="Agreed" class="inputChecked" />
+            <input
+              type="checkbox"
+              name="Agreed"
+              id="Agreed"
+              class="inputChecked"
+            />
             Я согласен на обработку персональных данных
           </label>
         </form>
@@ -156,7 +204,11 @@
           <div class="first__review slides">
             <div class="firstGuest">
               <div class="foto__block">
-                <img :src="require('./assets/img/girl.png')" alt="foto" class="foto" />
+                <img
+                  :src="require('./assets/img/girl.png')"
+                  alt="foto"
+                  class="foto"
+                />
               </div>
               <div class="infoGuest">
                 <h2 class="name">Дарья</h2>
@@ -166,17 +218,22 @@
                 <h4 class="order">Куда: Нижневартовск</h4>
               </div>
               <p class="comment">
-                Отличный и качественный сервис. Долго искали курьерскую службу для доставки наших
-                товаров. Решили попробовать и были приятно удивлены, что помимо удобного сайта,
-                компания предоставляет доступ в личный кабинет, где реализованы многие наши
-                потребности (ведение адресной базы, выбор и вызов курьера в пару кликов).
+                Отличный и качественный сервис. Долго искали курьерскую службу
+                для доставки наших товаров. Решили попробовать и были приятно
+                удивлены, что помимо удобного сайта, компания предоставляет
+                доступ в личный кабинет, где реализованы многие наши потребности
+                (ведение адресной базы, выбор и вызов курьера в пару кликов).
               </p>
             </div>
           </div>
           <div class="second__review hidden-slide slides">
             <div class="firstGuest">
               <div class="foto__block">
-                <img :src="require('./assets/img/woman.png')" alt="foto" class="foto" />
+                <img
+                  :src="require('./assets/img/woman.png')"
+                  alt="foto"
+                  class="foto"
+                />
               </div>
               <div class="infoGuest">
                 <h2 class="name">Елена</h2>
@@ -186,17 +243,22 @@
                 <h4 class="order">Куда: Калининград</h4>
               </div>
               <p class="comment">
-                Мне нравится работать с SendIt, потому что это удобно: моментальный расчет стоимости
-                доставки, удобный сайт, выборка среди основных надёжных логистических компаний и
-                самый значимый фактор – всё это можно оперативно организовать и не волноваться. И
-                ещё хочу сказать отдельное спасибо менеджеру за отзывчивость.
+                Мне нравится работать с SendIt, потому что это удобно:
+                моментальный расчет стоимости доставки, удобный сайт, выборка
+                среди основных надёжных логистических компаний и самый значимый
+                фактор – всё это можно оперативно организовать и не волноваться.
+                И ещё хочу сказать отдельное спасибо менеджеру за отзывчивость.
               </p>
             </div>
           </div>
           <div class="third__review hidden-slide slides makeDisplayForWoman">
             <div class="firstGuest grid__for_Marina">
               <div class="foto__block">
-                <img :src="require('./assets/img/thirdwoman.jpg')" alt="foto" class="foto" />
+                <img
+                  :src="require('./assets/img/thirdwoman.jpg')"
+                  alt="foto"
+                  class="foto"
+                />
               </div>
               <div class="infoGuest">
                 <h2 class="name">Марина</h2>
@@ -206,16 +268,21 @@
                 <h4 class="order">Куда: Владивосток</h4>
               </div>
               <p class="comment">
-                Не один раз курьеры доставляли мне посылки, еще ни разу не опоздали! Всегда
-                поражалась, как они укладываются в обозначенное время. Всегда вежливое отношение, ни
-                разу не сталкивалась с грубостью. Спасибо!
+                Не один раз курьеры доставляли мне посылки, еще ни разу не
+                опоздали! Всегда поражалась, как они укладываются в обозначенное
+                время. Всегда вежливое отношение, ни разу не сталкивалась с
+                грубостью. Спасибо!
               </p>
             </div>
           </div>
           <div class="forth__review hidden-slide slides">
             <div class="firstGuest">
               <div class="foto__block">
-                <img :src="require('./assets/img/forthwoman.jpg')" alt="foto" class="foto" />
+                <img
+                  :src="require('./assets/img/forthwoman.jpg')"
+                  alt="foto"
+                  class="foto"
+                />
               </div>
               <div class="infoGuest">
                 <h2 class="name">Света</h2>
@@ -225,10 +292,12 @@
                 <h4 class="order">Куда: Краснодар</h4>
               </div>
               <p class="comment">
-                Пользуюсь услугами данной компании почти каждый день. Давно искала эту компанию по
-                доставке, проблем никаких не возникает и цены на доставку недорогие, отличный и
-                качественный сервис. Все менеджеры приятные, товар можно отследить онлайн и доставка
-                очень быстрая! Отдельное спасибо менеджеру Валентине. Рекомендую.
+                Пользуюсь услугами данной компании почти каждый день. Давно
+                искала эту компанию по доставке, проблем никаких не возникает и
+                цены на доставку недорогие, отличный и качественный сервис. Все
+                менеджеры приятные, товар можно отследить онлайн и доставка
+                очень быстрая! Отдельное спасибо менеджеру Валентине.
+                Рекомендую.
               </p>
             </div>
           </div>
@@ -262,7 +331,9 @@
               />
             </div>
             <div class="text__of__advantages">
-              <p class="ourAdvantages__text">Огромный выбор вариантов доставки</p>
+              <p class="ourAdvantages__text">
+                Огромный выбор вариантов доставки
+              </p>
             </div>
           </div>
           <div class="same__content">
@@ -342,8 +413,9 @@
               </div>
               <div class="bottom__text">
                 <p class="insurance__text">
-                  Контроль работы курьеров в онлайн режиме. Страхование по запросу клиента Каждый
-                  куръер находится под пристальным вниманием менеджеров SendIt
+                  Контроль работы курьеров в онлайн режиме. Страхование по
+                  запросу клиента Каждый куръер находится под пристальным
+                  вниманием менеджеров SendIt
                 </p>
                 <div class="insurance__button forClick">
                   <a href="#" class="details"> подробнее </a>
@@ -353,7 +425,11 @@
             <div class="insurance insurance__hidden">
               <div class="insurance__block">
                 <div class="insurance__foto">
-                  <img :src="require('./assets/img/box.png')" alt="mailbox" class="foto__box" />
+                  <img
+                    :src="require('./assets/img/box.png')"
+                    alt="mailbox"
+                    class="foto__box"
+                  />
                 </div>
                 <div class="insurance__dispatch">
                   <h2 class="insurance__header">Прозрачность расчетов</h2>
@@ -361,9 +437,10 @@
               </div>
               <div class="bottom__text">
                 <p class="insurance__text price__text">
-                  Чтобы узнать точную стоимость отправления вам не нужно связываться с каждой
-                  курьерской службой в отдельности и сравнивать полученные предложения, просто
-                  воспользуйтесь нашим сервисом
+                  Чтобы узнать точную стоимость отправления вам не нужно
+                  связываться с каждой курьерской службой в отдельности и
+                  сравнивать полученные предложения, просто воспользуйтесь нашим
+                  сервисом
                 </p>
                 <div class="insurance__button forClick">
                   <a href="#" class="details">подробнее</a>
@@ -373,7 +450,11 @@
             <div class="insurance insurance__hidden">
               <div class="insurance__block">
                 <div class="insurance__foto">
-                  <img :src="require('./assets/img/guys.png')" alt="mailbox" class="foto__box" />
+                  <img
+                    :src="require('./assets/img/guys.png')"
+                    alt="mailbox"
+                    class="foto__box"
+                  />
                 </div>
                 <div class="insurance__dispatch">
                   <h2 class="insurance__header">Лучшие поставщики</h2>
@@ -381,8 +462,9 @@
               </div>
               <div class="bottom__text">
                 <p class="insurance__text">
-                  Мы работаем с самыми надежными и известными операторами доставки. Проверка
-                  надежности курьерской компании, экспертная оценка качества предоставляемых услуг
+                  Мы работаем с самыми надежными и известными операторами
+                  доставки. Проверка надежности курьерской компании, экспертная
+                  оценка качества предоставляемых услуг
                 </p>
                 <div class="insurance__button forClick">
                   <a href="#" class="details">подробнее</a>
@@ -405,13 +487,14 @@
             <v-row v-for="(n, index) in 6">
               <v-col class="d-flex">
                 <v-select
-                class="select"
-                :items="items[index]"
-                :label="items[index][0]"
-                dense
-                solo
-                rounded
-                append-icon="fa-solid fa-arrow-down fa-2xs">
+                  class="select"
+                  :items="items[index]"
+                  :label="items[index][0]"
+                  dense
+                  solo
+                  rounded
+                  append-icon="fa-solid fa-arrow-down fa-2xs"
+                >
                 </v-select>
               </v-col>
             </v-row>
@@ -428,12 +511,20 @@
         <div class="companies">
           <div class="bringo logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('@/assets/img/bringo.png')" alt="bringo" class="bringo__img" />
+              <img
+                :src="require('@/assets/img/bringo.png')"
+                alt="bringo"
+                class="bringo__img"
+              />
             </p>
           </div>
           <div class="cdek logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/cdek.png')" alt="cdek" class="cdek__img" />
+              <img
+                :src="require('./assets/img/cdek.png')"
+                alt="cdek"
+                class="cdek__img"
+              />
             </p>
           </div>
           <div class="cityExpress logoStyle slidesLogo">
@@ -447,27 +538,47 @@
           </div>
           <div class="dpd logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/dpd.png')" alt="dpd" class="dpd__img" />
+              <img
+                :src="require('./assets/img/dpd.png')"
+                alt="dpd"
+                class="dpd__img"
+              />
             </p>
           </div>
           <div class="pony logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/pony.png')" alt="pony" class="pony__img" />
+              <img
+                :src="require('./assets/img/pony.png')"
+                alt="pony"
+                class="pony__img"
+              />
             </p>
           </div>
           <div class="spsr logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/spsr.png')" alt="spsr" class="spsr__img" />
+              <img
+                :src="require('./assets/img/spsr.png')"
+                alt="spsr"
+                class="spsr__img"
+              />
             </p>
           </div>
           <div class="tnt logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/tnt.png')" alt="tnt" class="tnt__img" />
+              <img
+                :src="require('./assets/img/tnt.png')"
+                alt="tnt"
+                class="tnt__img"
+              />
             </p>
           </div>
           <div class="ups logoStyle slidesLogo">
             <p class="companies__link">
-              <img :src="require('./assets/img/ups.png')" alt="ups" class="ups__img" />
+              <img
+                :src="require('./assets/img/ups.png')"
+                alt="ups"
+                class="ups__img"
+              />
             </p>
           </div>
         </div>
@@ -502,14 +613,23 @@
               <div class="personalData">
                 <label for="footerData" class="data">
                   Я согласен на обработку персональных данных
-                  <input type="checkbox" name="data" id="footerData" class="inputChecked" />
+                  <input
+                    type="checkbox"
+                    name="data"
+                    id="footerData"
+                    class="inputChecked"
+                  />
                 </label>
               </div>
             </div>
           </form>
         </div>
         <div class="footer__middle">
-          <img :src="require('./assets/img/footerimg.png')" alt="Send it" class="send__it" />
+          <img
+            :src="require('./assets/img/footerimg.png')"
+            alt="Send it"
+            class="send__it"
+          />
           <label class="openSwitcher" for="switcher">
             <input id="switcher" type="checkbox" />
             <i class="fas fa-bars bigMak"></i>
@@ -547,18 +667,31 @@
           </div>
           <div class="footer__bottom_socialLinks">
             <a href="https://github.com/Mediumgr" class="instagram"
-              ><img :src="require('./assets/img/instagram.png')" alt="instagram" class="image"
+              ><img
+                :src="require('./assets/img/instagram.png')"
+                alt="instagram"
+                class="image"
             /></a>
             <a href="https://github.com/Mediumgr"
-              ><img :src="require('./assets/img/vk.png')" alt="vk" class="image"
+              ><img
+                :src="require('./assets/img/vk.png')"
+                alt="vk"
+                class="image"
             /></a>
             <a href="https://github.com/Mediumgr"
-              ><img :src="require('./assets/img/facebook.png')" alt="facebook" class="image"
+              ><img
+                :src="require('./assets/img/facebook.png')"
+                alt="facebook"
+                class="image"
             /></a>
           </div>
           <div class="footer__bottom_designer">
             <a href="https://github.com/Mediumgr" target="blank" class="text">
-              <img :src="require('./assets/img/github.jpg')" alt="github" class="github" />
+              <img
+                :src="require('./assets/img/github.jpg')"
+                alt="github"
+                class="github"
+              />
               <span class="myName">Ruslan Guseinov</span>
             </a>
           </div>
@@ -569,9 +702,15 @@
       <div class="modal">
         <form action="#" class="fillYourForm">
           <div class="crossForClose">
-            <img :src="require('./assets/img/mycrossforclose.svg')" alt="close" class="myCross" />
+            <img
+              :src="require('./assets/img/mycrossforclose.svg')"
+              alt="close"
+              class="myCross"
+            />
           </div>
-          <div class="fillYourForm__ofYourRequest">Оставьте заявку, и мы Вам перезвоним!</div>
+          <div class="fillYourForm__ofYourRequest">
+            Оставьте заявку, и мы Вам перезвоним!
+          </div>
           <label for="nameRequest">
             <input
               type="text"
@@ -587,12 +726,18 @@
             class="fillYourForm__input"
             placeholder="Ваш телефон"
           />
-          <button class="fillYourForm__callYouBack_button">заказать звонок</button>
+          <button class="fillYourForm__callYouBack_button">
+            заказать звонок
+          </button>
         </form>
       </div>
       <div class="accept">
         <div class="clickForAcceptClose">
-          <img :src="require('./assets/img/mycrossforclose.svg')" alt="close" class="myCross" />
+          <img
+            :src="require('./assets/img/mycrossforclose.svg')"
+            alt="close"
+            class="myCross"
+          />
         </div>
         <p class="accept__text">Спасибо. Ваша заявка принята!</p>
       </div>
@@ -607,7 +752,37 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export default {
   name: 'App',
   data: () => ({
-    items: [['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'], ['Мне необходимо совершить доставку по нескольким адресам', 'Дом', 'Улица', 'Торговый центр'], ['Вы не сможете доставить посылку за границу', 'Сможем доставить посылку за границу', 'Очень срочно напишите нам', 'Мы отошлем ее за вас'], ['Вы не занимаетесь такими простыми грузами, как мебельsda', 'Мы занимаемся за вас', 'Хватит сомневаться! Звоните нам'], ['Нужно заполнять кучу документов', 'Выбрать вариант без заполнения', 'Выбрать этот вариант'], ['Я отправляю вместе с коллегами, мы можем запутаться где чье', 'Мы отправим отдельно ваш заказ и не перепутаем', 'Выбрать вариант срочного заказа', 'Выбрать вариант обычного заказа']],
+    items: [
+      ['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'],
+      [
+        'Мне необходимо совершить доставку по нескольким адресам',
+        'Дом',
+        'Улица',
+        'Торговый центр',
+      ],
+      [
+        'Вы не сможете доставить посылку за границу',
+        'Сможем доставить посылку за границу',
+        'Очень срочно напишите нам',
+        'Мы отошлем ее за вас',
+      ],
+      [
+        'Вы не занимаетесь такими простыми грузами, как мебельsda',
+        'Мы занимаемся за вас',
+        'Хватит сомневаться! Звоните нам',
+      ],
+      [
+        'Нужно заполнять кучу документов',
+        'Выбрать вариант без заполнения',
+        'Выбрать этот вариант',
+      ],
+      [
+        'Я отправляю вместе с коллегами, мы можем запутаться где чье',
+        'Мы отправим отдельно ваш заказ и не перепутаем',
+        'Выбрать вариант срочного заказа',
+        'Выбрать вариант обычного заказа',
+      ],
+    ],
   }),
   methods: {
     hide(elem) {
@@ -629,14 +804,18 @@ export default {
       elem.style.transform = `translate(${x}px, ${y}px)`;
       // eslint-disable-next-line no-param-reassign
       elem.style.opacity = '0';
-      gsap.fromTo(elem, { x, y, autoAlpha: 0 }, {
-        duration: 1.40,
-        x: 0,
-        y: 0,
-        autoAlpha: 1,
-        ease: 'sine',
-        overwrite: 'auto',
-      });
+      gsap.fromTo(
+        elem,
+        { x, y, autoAlpha: 0 },
+        {
+          duration: 1.4,
+          x: 0,
+          y: 0,
+          autoAlpha: 1,
+          ease: 'sine',
+          overwrite: 'auto',
+        },
+      );
     },
   },
   mounted() {
@@ -651,9 +830,15 @@ export default {
         this.hide(elem); // to make element is hidden when scrolled into view
         ScrollTrigger.create({
           trigger: elem,
-          onEnter: () => { this.animateFrom(elem); },
-          onEnterBack: () => { this.animateFrom(elem, -1); },
-          onLeave: () => { this.hide(elem); },
+          onEnter: () => {
+            this.animateFrom(elem);
+          },
+          onEnterBack: () => {
+            this.animateFrom(elem, -1);
+          },
+          onLeave: () => {
+            this.hide(elem);
+          },
         });
       });
     });

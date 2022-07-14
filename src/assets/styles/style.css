@@ -367,6 +367,15 @@ header {
   }
 }
 
+@media (orientation: landscape) {
+  .nav__menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .nav__link {
   font-size: 18px;
   line-height: 22px;
