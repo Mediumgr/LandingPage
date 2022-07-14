@@ -131,8 +131,31 @@
           />
           <h2 class="content__h2">Шаг 2</h2>
           <p class="content__text">
+<<<<<<< HEAD
             Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит
             и подтвердит запрос, уточнит все необходимые данные
+||||||| 3af59c1
+            Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит и подтвердит
+            запрос, уточнит все необходимые данные
+          </p>
+        </div>
+        <div class="content__box gs_reveal"><!--  v-scroll:move.c="handleScroll" -->
+          <img :src="require('./assets/img/3.png')" alt="step 3" class="content__img" />
+          <h2 class="content__h2">Шаг 3</h2>
+          <p class="content__text">
+            К Вам приезжает курьер, забирает посылку, Вы подписываете один документ
+=======
+            Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит и подтвердит
+            запрос, уточнит все необходимые данные
+          </p>
+        </div>
+        <div class="content__box gs_reveal">
+          <!--  v-scroll:move.c="handleScroll" -->
+          <img :src="require('./assets/img/3.png')" alt="step 3" class="content__img" />
+          <h2 class="content__h2">Шаг 3</h2>
+          <p class="content__text">
+            К Вам приезжает курьер, забирает посылку, Вы подписываете один документ
+>>>>>>> my-dev-3
           </p>
         </div>
         <div class="content__box gs_reveal">
@@ -198,9 +221,9 @@
         <h2 class="review">Отзывы</h2>
         <div class="leaveYourComments slider">
           <!-- eslint-disable  -->
-          <a class="arrow__left">
+          <span class="arrow__left">
             <i class="fas fa-chevron-left fa-2x"></i>
-          </a>
+          </span>
           <div class="first__review slides">
             <div class="firstGuest">
               <div class="foto__block">
@@ -302,9 +325,9 @@
             </div>
           </div>
           <!-- eslint-disable -->
-          <a class="arrow__right">
+          <span class="arrow__right">
             <i class="fas fa-chevron-right fa-2x"></i>
-          </a>
+          </span>
         </div>
       </article>
       <div class="ourAdvantages center gs_reveal">
@@ -391,9 +414,9 @@
         <div class="flex__container">
           <div class="go__ahead__left">
             <!-- eslint-disable -->
-            <a class="arrow__companies__left">
+            <span class="arrow__companies__left">
               <i class="fas fa-chevron-left fa-2x"></i>
-            </a>
+            </span>
           </div>
           <div class="information__block">
             <div class="insurance">
@@ -474,9 +497,9 @@
           </div>
           <div class="go__ahead__right">
             <!-- eslint-disable -->
-            <a class="arrow__companies__right">
+            <span class="arrow__companies__right">
               <i class="fas fa-chevron-right fa-2x"></i>
-            </a>
+            </span>
           </div>
         </div>
       </section>
@@ -504,9 +527,9 @@
       <div class="companies__block center gs_reveal gs_reveal_fromRight">
         <div class="go__left">
           <!-- eslint-disable -->
-          <a class="arrow__companies__left">
+          <span class="arrow__companies__left">
             <i class="fas fa-chevron-left fa-2x"></i>
-          </a>
+          </span>
         </div>
         <div class="companies">
           <div class="bringo logoStyle slidesLogo">
@@ -584,9 +607,9 @@
         </div>
         <div class="go__right">
           <!--  eslint-disable -->
-          <a class="arrow__companies__right">
+          <span class="arrow__companies__right">
             <i class="fas fa-chevron-right fa-2x"></i>
-          </a>
+          </span>
         </div>
       </div>
       <div class="footer center gs_reveal">
@@ -752,37 +775,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export default {
   name: 'App',
   data: () => ({
-    items: [
-      ['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'],
-      [
-        'Мне необходимо совершить доставку по нескольким адресам',
-        'Дом',
-        'Улица',
-        'Торговый центр',
-      ],
-      [
-        'Вы не сможете доставить посылку за границу',
-        'Сможем доставить посылку за границу',
-        'Очень срочно напишите нам',
-        'Мы отошлем ее за вас',
-      ],
-      [
-        'Вы не занимаетесь такими простыми грузами, как мебельsda',
-        'Мы занимаемся за вас',
-        'Хватит сомневаться! Звоните нам',
-      ],
-      [
-        'Нужно заполнять кучу документов',
-        'Выбрать вариант без заполнения',
-        'Выбрать этот вариант',
-      ],
-      [
-        'Я отправляю вместе с коллегами, мы можем запутаться где чье',
-        'Мы отправим отдельно ваш заказ и не перепутаем',
-        'Выбрать вариант срочного заказа',
-        'Выбрать вариант обычного заказа',
-      ],
-    ],
+    items: [['Не уйдет много времени', 'Не сомневайтесь', 'Очень срочно'], ['Мне необходимо совершить доставку по нескольким адресам', 'Дом', 'Улица', 'Торговый центр'], ['Вы не сможете доставить посылку за границу', 'Сможем доставить посылку за границу', 'Очень срочно напишите нам', 'Мы отошлем ее за вас'], ['Вы не занимаетесь такими простыми грузами, как мебельsda', 'Мы занимаемся за вас', 'Хватит сомневаться! Звоните нам'], ['Нужно заполнять кучу документов', 'Выбрать вариант без заполнения', 'Выбрать этот вариант'], ['Я отправляю вместе с коллегами, мы можем запутаться где чье', 'Мы отправим отдельно ваш заказ и не перепутаем', 'Выбрать вариант срочного заказа', 'Выбрать вариант обычного заказа']],
   }),
   methods: {
     hide(elem) {

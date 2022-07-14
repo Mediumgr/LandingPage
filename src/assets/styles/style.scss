@@ -275,6 +275,7 @@ header {
         font-size: 18px;
         line-height: 22px;
         color: $color;
+        margin-bottom: 0 !important;
 
         &:hover {
             color: $background-light;
@@ -1738,4 +1739,7 @@ input.your__phone::placeholder {
 
 .myName {
     color: black;
+    position: relative;
+    bottom: 2px;
+    left: 2px;
 }
